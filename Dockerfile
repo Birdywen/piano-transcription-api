@@ -4,7 +4,7 @@ FROM nvidia/cuda:12.8.1-cudnn-runtime-ubuntu24.04
 ENV DEBIAN_FRONTEND=noninteractive PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3.11 python3.11-venv python3-pip ffmpeg libsndfile1 curl \
+    python3 python3-venv python3-pip ffmpeg libsndfile1 curl \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /srv
